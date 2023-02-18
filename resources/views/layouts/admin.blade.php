@@ -11,7 +11,7 @@
     <meta name="description"
           content="Flexy Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Flexy Admin Lite Template by WrapPixel</title>
+    <title>admin | {{ $pageName }}</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/Flexy-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset("/admin_assets/assets/images/favicon.png")}}">
@@ -89,10 +89,10 @@
                     <!-- Search -->
                     <!-- ============================================================== -->
                     <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
-                                                        href="javascript:void(0)"><i class="mdi mdi-magnify me-1"></i> <span class="font-16">Search</span></a>
+                                                        href="javascript:void(0)"><i class=""></i> <span class="font-16"></span></a>
                         <form class="app-search position-absolute">
                             <input type="text" class="form-control" placeholder="Search &amp; enter"> <a
-                                class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                                class=""><i class=""></i></a>
                         </form>
                     </li>
                 </ul>
@@ -137,10 +137,10 @@
                 <ul id="sidebarnav">
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                                  href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
-                                class="hide-menu">Dashboard</span></a></li>
+                                class="hide-menu">Главная</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                                  href="pages-profile.html" aria-expanded="false"><i
-                                class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
+                                class="mdi mdi-account-network"></i><span class="hide-menu">Пользователи</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                                  href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
                                 class="hide-menu">Table</span></a></li>
@@ -153,10 +153,6 @@
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                                  href="error-404.html" aria-expanded="false"><i class="mdi mdi-alert-outline"></i><span
                                 class="hide-menu">404</span></a></li>
-                    <li class="text-center p-40 upgrade-btn">
-                        <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/"
-                           class="btn d-block w-100 btn-danger text-white" target="_blank">Upgrade to Pro</a>
-                    </li>
                 </ul>
 
             </nav>
