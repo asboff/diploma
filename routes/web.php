@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,7 @@ Route::prefix('admin')->group(function () {
         return view('admin.index', [
             'pageName' => "Главная",
         ]);
-    });
+    })->name('admin.index');
     Route::resource('categories',CategoryController::class)->except(['show']);
+    Route::resource('users', UserController::class);
 });

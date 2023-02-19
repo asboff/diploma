@@ -136,14 +136,14 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                                 href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                                                 href="{{ route('admin.index') }}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                 class="hide-menu">Главная</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                                 href="pages-profile.html" aria-expanded="false"><i
+                                                 href="{{ route('users.index') }}" aria-expanded="false"><i
                                 class="mdi mdi-account-network"></i><span class="hide-menu">Пользователи</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                                 href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
-                                class="hide-menu">Table</span></a></li>
+                                                 href="{{ route('categories.index') }}" aria-expanded="false"><i class="mdi mdi-format-list-bulleted"></i><span
+                                class="hide-menu">Категории</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                                  href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                 class="hide-menu">Icon</span></a></li>
