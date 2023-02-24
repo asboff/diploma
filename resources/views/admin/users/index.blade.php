@@ -27,7 +27,7 @@
                         <td>{{ $user->deals_number }}</td>
                         <td>@if($user->is_company == 1)<i class="mdi mdi-check"></i>@endif</td>
                         <td>@if($user->is_banned)
-                                <a class="badge bg-success">Разблокировать</a>
+                                <a class="badge bg-success" href="{{ route('users.edit', compact('user')) }}">Разблокировать</a>
                             @else
                                 <a class="badge bg-danger" href="{{ route('users.edit', compact('user')) }}">Заблокировать</a>
                         @endif</td>

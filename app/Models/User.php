@@ -22,6 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'is_company',
+        'is_banned',
+        'ban_reason',
     ];
 
     /**

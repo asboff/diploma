@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserBanRequest;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -56,10 +57,17 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user): RedirectResponse
+    public function update(UserBanRequest $request, User $user)
     {
-        $user->is_banned = true;
-
+        if($user->is_banned){
+            $user->ban_reason = null;
+            $user->is_banned = 0;
+        }else{
+            $user->fill($request->all());
+            $user->is_banned = 1;
+        }
+        $user->save();
+        return redirect(route('users.index'));
     }
 
     /**
