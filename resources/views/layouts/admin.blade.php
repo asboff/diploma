@@ -52,7 +52,7 @@
                 <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ route('admin.index') }}">
                     <!-- Logo icon -->
                     <b class="logo-icon">
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -145,11 +145,11 @@
                                                  href="{{ route('categories.index') }}" aria-expanded="false"><i class="mdi mdi-format-list-bulleted"></i><span
                                 class="hide-menu">Категории</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                                 href="starter-kit.html" aria-expanded="false"><i class="mdi mdi-file"></i><span
+                                class="hide-menu">Объявления</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                                  href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                 class="hide-menu">Icon</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                                 href="starter-kit.html" aria-expanded="false"><i class="mdi mdi-file"></i><span
-                                class="hide-menu">Blank</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                                  href="error-404.html" aria-expanded="false"><i class="mdi mdi-alert-outline"></i><span
                                 class="hide-menu">404</span></a></li>

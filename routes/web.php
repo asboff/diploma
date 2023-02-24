@@ -2,12 +2,14 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContactMessageSender;
 use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\PropertyPageController;
 use App\Http\Controllers\SiteController;
+use App\Models\Message;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,16 +35,13 @@ Route::prefix('admin')->group(function () {
     Route::get('/', function () {
         return view('admin.index', [
             'pageName' => "Главная",
+            'messages' => Message::all()->reverse()->take(6),
         ]);
     })->name('admin.index');
     Route::resource('categories',CategoryController::class)->except(['show']);
     Route::resource('users', UserController::class);
+    Route::resource('properties', PropertyController::class);
 })->middleware('admin');
-
-Route::get('/test', function(){
-    return view('welcome');
-});
-
 
 
 Auth::routes();

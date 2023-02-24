@@ -18,7 +18,7 @@
                       <br> {{ $property->address }}
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">Br{{ ($property->price)/100 }}</span></a>
+                      <a href="{{ route('property', compact('property')) }}"><span class="price-a">Br{{ ($property->price)/100 }}</span></a>
                     </p>
                   </div>
                 </div>
@@ -65,7 +65,7 @@
                                   <div class="card-overlay-a-content">
                                       <div class="card-header-a">
                                           <h2 class="card-title-a">
-                                              <a href="property-single.html">{{ $property->location }}
+                                              <a href="{{ route('property', compact('property')) }}">{{ $property->location }}
                                                   <br /> {{ $property->address }}</a>
                                           </h2>
                                       </div>

@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $pageName = 'Создание новой категории';
+        $pageName = 'Создание нового объявления';
         return view('admin.categories.create', compact('pageName'));
     }
 

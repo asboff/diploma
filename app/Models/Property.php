@@ -26,5 +26,8 @@ class Property extends Model
         return $category->name;
     }
 
-
+    public function user(){
+        $user = User::find($this->user_id);
+        return $user->name;
+    }
 }

@@ -62,7 +62,7 @@
                     <div class="price-box d-flex">
                       <span class="price-a">Br {{ $property->price/100 }}</span>
                     </div>
-                    <a href="property-single.html" class="link-a">Посмотреть
+                    <a href="{{ route('property', compact('property')) }}" class="link-a">Посмотреть
                       <span class="bi bi-chevron-right"></span>
                     </a>
                   </div>

@@ -14,7 +14,7 @@
                         <th scope="col">Имя</th>
                         <th scope="col">E-mail</th>
                         <th scope="col">Количество сделок</th>
-                        <th scope="col">Компания</th>
+                        <th scope="col">Админ</th>
                         <th scope="col">Действия</th>
                     </tr>
                     </thead>
@@ -25,7 +25,7 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->deals_number }}</td>
-                        <td>@if($user->is_company == 1)<i class="mdi mdi-check"></i>@endif</td>
+                        <td>@if($user->is_admin == 1)<i class="mdi mdi-check"></i>@endif</td>
                         <td>@if($user->is_banned)
                                 <a class="badge bg-success" href="{{ route('users.edit', compact('user')) }}">Разблокировать</a>
                             @else

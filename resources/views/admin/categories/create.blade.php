@@ -13,5 +13,6 @@
                 {{ $error }}
             @endforeach
         @endif
+        <button type="submit" class="badge bg-success" style="border: 0px">Создать</button>
     </form>
 @endsection
