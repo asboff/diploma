@@ -43,28 +43,49 @@
           <div class="col-sm-12 section-t8">
             <div class="row">
               <div class="col-md-7">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form action="{{ route('contact.store') }}" method="post" role="form" class="php-email-form">
+                    @csrf
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Ваше имя" required>
+                        <input type="text" name="name" class="form-control form-control-lg form-control-a {{$errors->has('name') ? 'is-invalid':''}}" placeholder="Ваше имя" value="{{ old('name') }}" required>
                       </div>
                     </div>
+                      @if($errors->has('name'))
+                          @foreach($errors->get('name') as $error)
+                              {{ $error }}
+                          @endforeach
+                      @endif
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Ваш e-mail адрес" required>
+                        <input name="email" type="email" class="form-control form-control-lg form-control-a {{$errors->has('email') ? 'is-invalid':''}}" placeholder="Ваш e-mail адрес" value="{{ old('email') }}" required>
                       </div>
                     </div>
+                      @if($errors->has('email'))
+                          @foreach($errors->get('email') as $error)
+                              {{ $error }}
+                          @endforeach
+                      @endif
                     <div class="col-md-12 mb-3">
                       <div class="form-group">
-                        <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Тема" required>
+                        <input type="text" name="subject" class="form-control form-control-lg form-control-a {{$errors->has('subject') ? 'is-invalid':''}}" placeholder="Тема" value="{{ old('subject') }}" required>
                       </div>
                     </div>
+                      @if($errors->has('subject'))
+                          @foreach($errors->get('subject') as $error)
+                              {{ $error }}
+                          @endforeach
+                      @endif
                     <div class="col-md-12">
                       <div class="form-group">
-                        <textarea name="message" class="form-control" name="message" cols="45" rows="8" placeholder="Сообщение" required></textarea>
+                        <textarea name="message" class="form-control {{$errors->has('message') ? 'is-invalid':''}}" name="message" cols="45" rows="8" placeholder="Сообщение" value="{{ old('text') }}" required></textarea>
                       </div>
                     </div>
+                      @if($errors->has('message'))
+                          @foreach($errors->get('message') as $error)
+                              {{ $error }}
+                          @endforeach
+                      @endif
                     <div class="col-md-12 my-3">
                       <div class="mb-3">
                         <div class="loading">Загрузка</div>

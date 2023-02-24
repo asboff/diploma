@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactMessageRequest;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
