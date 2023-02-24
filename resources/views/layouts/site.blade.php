@@ -137,7 +137,7 @@
             <span></span>
             <span></span>
         </button>
-        <a class="navbar-brand text-brand" href="index.html">Rent<span class="color-b">Flat</span></a>
+        <a class="navbar-brand text-brand" href="{{ route('index') }}">Rent<span class="color-b">Flat</span></a>
 
         <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
             <ul class="navbar-nav">
@@ -151,11 +151,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="property-grid.html">Property</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link " href="blog-grid.html">Blog</a>
+                    <a class="nav-link @if($pageName == "Аренда") active @endif" href="{{ route('properties') }}">Аренда</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -167,6 +163,11 @@
                         <a class="dropdown-item " href="agent-single.html">Agent Single</a>
                     </div>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="blog-grid.html">Blog</a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link @if($pageName == "Контакты") active @endif" href="{{ route('contact') }}">Контакты</a>
                 </li>

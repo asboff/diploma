@@ -16,6 +16,15 @@ class Property extends Model
         'area',
         'description',
         'price',
+        'area',
+        'address',
+        'images_dir'
     ];
+
+    public function category(){
+        $category = Category::find($this->category);
+        return $category->name;
+    }
+
 
 }

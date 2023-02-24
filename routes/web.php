@@ -4,6 +4,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PropertiesController;
+use App\Http\Controllers\PropertyPageController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', SiteController::class)->name('index');
 Route::get('/about', AboutController::class)->name('about');
 Route::get('/contact', ContactController::class)->name('contact');
+Route::get('/properties', PropertiesController::class)->name('properties');
+Route::get('/properties/{property}', PropertyPageController::class)->name('property');
 
 
 Route::prefix('admin')->group(function () {

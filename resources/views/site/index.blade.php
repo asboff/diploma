@@ -71,9 +71,9 @@
                                       </div>
                                       <div class="card-body-a">
                                           <div class="price-box d-flex">
-                                              <span class="price-a">аренда | Br {{ $property->price/100 }}</span>
+                                              <span class="price-a">Br {{ $property->price/100 }}</span>
                                           </div>
-                                          <a href="#" class="link-a">Нажмите, чтобы посмотреть
+                                          <a href="#" class="link-a">Посмотреть
                                               <span class="bi bi-chevron-right"></span>
                                           </a>
                                       </div>
@@ -84,6 +84,10 @@
                                                   <span>{{ $property->area }}m
                             <sup>2</sup>
                           </span>
+                                              </li>
+                                              <li>
+                                                  <h4 class="card-info-title">Комнаты</h4>
+                                                  <span>{{ $property->rooms }}</span>
                                               </li>
                                           </ul>
                                       </div>
