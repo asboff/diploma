@@ -11,7 +11,7 @@
 
     <!-- Favicons -->
     <link href="{{ asset("/site_assets/img/favicon.png") }}" rel="icon">
-    <link href="{{ asset("/site_assets/apple-touch-icon.png") }} rel="apple-touch-icon">
+    <link href="{{ asset("/site_assets/apple-touch-icon.png") }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -168,7 +168,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="contact.html">Contact</a>
+                    <a class="nav-link @if($pageName == "Контакты") active @endif" href="{{ route('contact') }}">Контакты</a>
                 </li>
             </ul>
         </div>
@@ -290,7 +290,7 @@
                             <a href="#">Blog</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">Contact</a>
+                            <a href="{{ route('contact') }}">Контакты</a>
                         </li>
                     </ul>
                 </nav>

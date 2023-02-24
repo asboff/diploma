@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,10 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', SiteController::class)->name('index');
 Route::get('/about', AboutController::class)->name('about');
+Route::get('/contact', ContactController::class)->name('contact');
 
-//Route::get('/admin', function () {
-//    return view('admin.index');
-//});
 
 Route::prefix('admin')->group(function () {
     Route::get('/', function () {
@@ -32,4 +31,6 @@ Route::prefix('admin')->group(function () {
     })->name('admin.index');
     Route::resource('categories',CategoryController::class)->except(['show']);
     Route::resource('users', UserController::class);
-});
+})->middleware('admin');
+
+
